@@ -10,40 +10,71 @@
 <body>
     
    <style>
-    #menu ul {
-    background: #bdbba9;
-    list-style-type: none;
-    text-align: center;
+ #fixNav{
+  width: 100%;
+  height: 35px;
+  background-color: #265325;
+  display: block;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.5); /*Đổ bóng cho menu*/
+  position: fixed; /*Cho menu cố định 1 vị trí với top và left*/
+  top: 0; /*Nằm trên cùng*/
+  left: 0; /*Nằm sát bên trái*/
+  z-index: 100000; /*Hiển thị lớp trên cùng*/
 }
-#menu li{
-    color: #f1f1f1;
-    float: left;
-    width: 90px;
-    height: 40px;
-    line-height: 40px;
+#fixNav ul{
+  margin: 0;
+  padding: 0;
 }
-#menu ul{
-    background-image: url(https://i.imgur.com/lbuNPZV.jpeg);
-    list-style-type: none;
-    overflow: hidden;
-    width: 100%;
+#fixNav ul li{
+  list-style:none inside;
+  width: auto;
+  float: left;
+  line-height: 35px; /*Cho text canh giữa menu*/
+  color: #fff;
+  padding: 0;
+  margin-right:10px;
+  position: relative;
 }
-#menu ul li a {
-    color: #000000;
-    text-decoration: none;
-    display: block;
+#fixNav ul li a{
+  text-transform: uppercase;
+  white-space: nowrap; /*Cho chữ trong menu không bị wrap*/
+  padding: 0 10px;
+  color: #fff;
+  display: block;
+  font-size: 0.8em;
+  text-decoration: none;
 }
-#menu ul li a: hover {
-    background: #f1f1f1;
-    color: #0a0a0a;
+/*CSS Style cho Submenu*/
+#fixNav ul li ul {
+  position: absolute;
+  width: auto;
+  display: none;
+  background-color: #252525;
+  border-bottom: 3px solid #0082bb;
+  padding-left: 5px;
 }
 
+#fixNav ul li ul li{
+  display: block;
+  padding:0;
+  margin: 0;
+  float: none; /*Bỏ float cho li cấp thứ 2*/
+}
+/* Hover cho submenu */
+#fixNav ul li:hover {
+  /* Hover thì li sẽ đổi màu*/
+  background-color: #252525;
+}
+#fixNav ul li:hover ul{
+  /*Display ra submenu*/
+  display: block;
+}   
     h1{
         background-color: rgb(255, 255, 255);
         text-align: center;
         color: rgb(0, 0, 0)
-}
-   
+    }
+    
     #div1{ 
      
     }
@@ -57,16 +88,29 @@
              }
 
    </style>
-        <div id="menu">
-            <ul>
-                <li > <a href="https://alouab.github.io/">Trang chủ</a></li>
-                <li > <a href="dichvu.html">Dịch vụ</a></li>
-                <li > <a href="lienhe.html">Liên hệ</a></li>
-                <li > <a href="https://www.pnj.com.vn/">PNJ</a></li>
-            </ul>
-        </div>
-    
-    <h1>THÀNH ĐẠT WOOD</h1>
+   <nav id="fixNav">
+    <ul>
+      <li><a href="https://alouab.github.io">Trang chủ</a></li>
+      <li><a href="#">Dịch vụ</a></li>
+      <li><a href="#">Liên hệ</a></li>
+      <li><a href="https://www.pnj.com.vn">PNJ</a></li>
+      <li>
+        <a href="#">Khác</a>
+        <ul class="sub-menu">
+          <li><a href="#">MKT PNJ</a></li>
+          <li><a href="#">viber PNJ</a></li>
+          <li><a href="#">ALouab</a></li>
+       </ul>
+      </li>
+    </ul>
+  </nav>
+    <div>
+    <ul>
+        <img src="https://i.imgur.com/Iqfc7xD.jpeg" alt="Bìa" width: 70px; height: 40px;
+    </ul>   
+    </div>
+   
+    <h1>Thành Đạt Wood</h1>
         
         <h2 id="div1">
            1.Giới thiệu 
@@ -107,20 +151,20 @@
             <img src="https://i.imgur.com/xOMULiV.jpeg" alt="Gỗ1" width="150px">
             <img src="https://i.imgur.com/0LTBi9Y.jpeg" alt="gỗ2" width="150px" height="200px">
         </ul>
-    </div>  
-<p>
+    </div>
+        <p>
             Với sự tinh tế trong thiết kế và chất lượng tốt, sản phẩm nội thất từ gỗ quý không chỉ làm cho căn phòng trở nên đẹp mắt mà còn tạo điểm nhấn độc đáo và sang trọng. Bạn có thể tìm thấy các sản phẩm như bàn ăn, giường ngủ, tủ quần áo, kệ sách, ghế sofa hay đồ trang trí được làm từ gỗ quý với các kiểu dáng đa dạng và phù hợp với mọi phong cách trang trí. <br>
             </br> 
         </p>  
     <div>
         <ul>
-            <img src="https://i.imgur.com/TWJNsV7.jpeg" alt="Sản phẩm 1" width="150px">
-            <img src="https://i.imgur.com/ARWd6XF.jpeg" alt="sản phẩm 2"width="150px">
+            <img src="https://i.imgur.com/TWJNsV7.jpeg" alt="Sản phẩm 1">
+            <img src="https://i.imgur.com/ARWd6XF.jpeg" alt="sản phẩm 2">
         </ul>
     </div>  
         <p>
             Không chỉ là vật dụng hữu ích, sản phẩm nội thất từ gỗ quý còn là biểu tượng của sự sang trọng, đẳng cấp và sự đầu tư lâu dài vào không gian sống của bạn. Với khả năng tương thích với nhiều loại phông cách trang trí khác nhau, sản phẩm nội thất từ gỗ quý sẽ là điểm nhấn hoàn hảo cho ngôi nhà của bạn.
-        </p>      
+        </p>    
  
             <a href="https://www.facebook.com/Nguyenthanhdat191919/">Facebook CEO Thành Đạt</a>
             <br>
