@@ -1,182 +1,117 @@
 <!DOCTYPE html>
-<html lang="vi-VN">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <title>Nội thất China Alouab</title>
+    <link rel="stylesheet" href="../css/dangnhap.css">
+    <title>Đăng nhập</title>
 </head>
 <body>
+<style>
+   .form {
+    width: 300px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    font-family: inherit;
+  }
+  
+  .input {
+    font-size: 15px;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2), 0 .5px .5px rgba(0, 0, 0, .2);
+    outline: none;
+  }
+  
+  .input:focus {
+    outline: 1.2px solid #1877f2;
+  }
+  
+  #loginBtn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 20px;
+    align-self: center;
+    background: #1877f2;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  #loginBtn:hover {
+    background: #196fe0;
+  }
+  
+  #forgotPassword {
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 13px;
+    align-self: center;
+    font-weight: bold;
+    color: #1877f2;
+  }
+  
+  #forgotPassword::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: .5px;
+    bottom: -25px;
+    left: 0;
+    background: #dadde1;
+  }
+  
+  #forgotPassword:hover {
+    text-decoration: underline;
+  }
+  
+  #createAccountBtn {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding: 15px 15px;
+    align-self: center;
+    background: #42b72a;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  #createAccountBtn:hover {
+    background: #34a61d;
+  }
+  
+  .form{
+    position: relative;
+  }
+  
+  .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+</style>
+    <form class="form">
+        <input placeholder="Email address or phone number" class="input" type="text">
+        <input placeholder="Password" class="input" type="password" id="password"> 
+        <button id="loginBtn">Log in</button>
+        <a id="forgotPassword" href="#">Forgotten password?</a>
+        <button class="create" id="createAccountBtn">Create new account</button>
+    </form>
     
-   <style>
- #fixNav{
-  width: 100%;
-  height: 35px;
-  background-color: #202420;
-  display: block;
-  box-shadow: 0px 2px 2px rgba(0,0,0,0.5); /*Đổ bóng cho menu*/
-  position: fixed; /*Cho menu cố định 1 vị trí với top và left*/
-  top: 0; /*Nằm trên cùng*/
-  left: 0; /*Nằm sát bên trái*/
-  z-index: 100000; /*Hiển thị lớp trên cùng*/
-}
-#fixNav ul{
-  margin: 0;
-  padding: 0;
-}
-#fixNav ul li{
-  list-style:none inside;
-  width: auto;
-  float: left;
-  line-height: 35px; /*Cho text canh giữa menu*/
-  color: #fff;
-  padding: 0;
-  margin-right:10px;
-  position: relative;
-}
-#fixNav ul li a{
-  text-transform: uppercase;
-  white-space: nowrap; /*Cho chữ trong menu không bị wrap*/
-  padding: 0 10px;
-  color: #fff;
-  display: block;
-  font-size: 0.8em;
-  text-decoration: none;
-}
-/*CSS Style cho Submenu*/
-#fixNav ul li ul {
-  position: absolute;
-  width: auto;
-  display: none;
-  background-color: #252525;
-  border-bottom: 3px solid #0082bb;
-  padding-left: 5px;
-}
-
-#fixNav ul li ul li{
-  display: block;
-  padding:0;
-  margin: 0;
-  float: none; /*Bỏ float cho li cấp thứ 2*/
-}
-/* Hover cho submenu */
-#fixNav ul li:hover {
-  /* Hover thì li sẽ đổi màu*/
-  background-color: #252525;
-}
-#fixNav ul li:hover ul{
-  /*Display ra submenu*/
-  display: block;
-}   
-    h1{
-        background-color: rgb(255, 255, 255);
-        text-align: center;
-        color: rgb(0, 0, 0)
-    }
-    
-    #div1{ 
-     
-    }
-
-    #hinhanhceo{
-                text-align: center;
-                text-indent :0px
-               }    
-    #achutich{
-              border-radius: 14px;
-             }
-
-   </style>
-   <nav id="fixNav">
-    <ul>
-      <li><a href="https://alouab.github.io">Trang chủ</a></li>
-      <li><a href="https://www.pnj.com.vn">PNJ</a></li>
-      <li><a href="https://download.pnjexm.com">Liên hệ</a></li>
-      <li>
-        <a href="#">Dịch vụ </a>
-        <ul class="Dịch vụ">
-          <li><a href="#">MKT PNJ</a></li>
-          <li><a href="#">viber PNJ</a></li>
-          <li><a href="#">ALouab</a></li>
-       </ul>
-      </li>
-           <li><a href="#">Khác</a></li>
-    </ul>
-  </nav>
-    <div>
-    <ul>
-        <img src="https://i.imgur.com/TQusYiv.png" alt="Bìa" width="70px"; height="10px;">
-    </ul>   
-    </div>
-   
-    <h1>Thành Đạt Wood</h1>
-        
-        <h2 id="div1">
-           1.Giới thiệu 
-        </h2> 
-        <p>
-        <br>
-            Nguyễn Thành Đạt, sinh năm 1980, là một doanh nhân Việt Nam nổi tiếng với sự nghiệp kinh doanh ấn tượng mà ông đã xây dựng từ năm 2010. Sau khi thành lập công ty gỗ tại Trung Quốc vào năm 2014, Nguyễn Thành Đạt đã không ngừng phát triển và mở rộng hoạt động kinh doanh của mình. <br>
-        </br>
-        Với tâm huyết và tầm nhìn chiến lược, công ty gỗ do Nguyễn Thành Đạt sáng lập đã trở thành một trong những địa chỉ uy tín và chất lượng hàng đầu trong ngành công nghiệp gỗ tại Trung Quốc. Sứ mệnh của ông là mang đến cho khách hàng những sản phẩm gỗ chất lượng cao, đồng thời đảm bảo bền vững với môi trường và xã hội. <br>
-        </br>
-        Với sự quản lý chuyên nghiệp và đội ngũ nhân viên tận tâm, công ty gỗ của Nguyễn Thành Đạt không chỉ đạt được thành công về kinh doanh mà còn góp phần vào sự phát triển bền vững của ngành công nghiệp gỗ tại Trung Quốc. Sự cam kết và uy tín của ông đã giúp công ty đạt được nhiều giải thưởng và danh hiệu uy tín trong ngành. <br>
-        </br>
-        Với tinh thần sáng tạo và không ngừng học hỏi, Nguyễn Thành Đạt và công ty gỗ của mình tiếp tục phấn đấu để đem lại giá trị tốt nhất cho khách hàng và cộng đồng. Đó chính là lý do mà công ty gỗ của Nguyễn Thành Đạt luôn được biết đến và tin tưởng trên thị trường. <br>
-        </br>
-        </p>
-        <br>
-
-        <p id="hinhanhceo">Những hình ảnh về người sáng lập ra công ty Gỗ Thành Đạt</p>
-        <div>
-            <ul id="achutich">
-                <img src="https://i.imgur.com/WEESLaE.jpeg" alt="Hình ảnh 1" width="150px"> 
-                <img src="https://i.imgur.com/OPZnzfh.jpg" alt="Hình Ảnh 2" width="150px" >
-                <img src="https://i.imgur.com/3W1LFUy.jpeg" alt="Hình ảnh 3" width="150px">
-                <img src="https://i.imgur.com/1zNTDpc.jpeg" alt="Hình Ảnh 4" width="150px">
-            </ul>
-          </div>
-        <h2>
-            2.Sản phẩm
-        </h2>
-        <p>
-            Sản phẩm nội thất được làm bằng gỗ quý là một lựa chọn tuyệt vời để trang trí và nâng cao không gian sống của bạn. Gỗ quý, với vẻ đẹp tự nhiên và độ bền cao, không chỉ mang lại vẻ đẹp sang trọng mà còn tạo cảm giác ấm áp và gần gũi cho không gian sống của bạn. <br>
-    </br>
-            Gỗ mà Thành Đạt Wood sử dụng <br>
-        </br>
-        </p>
-    <div>
-        <ul>
-            <img src="https://i.imgur.com/xOMULiV.jpeg" alt="Gỗ1" width="150px">
-            <img src="https://i.imgur.com/0LTBi9Y.jpeg" alt="gỗ2" width="150px" height="200px">
-        </ul>
-    </div>
-        <p>
-            Với sự tinh tế trong thiết kế và chất lượng tốt, sản phẩm nội thất từ gỗ quý không chỉ làm cho căn phòng trở nên đẹp mắt mà còn tạo điểm nhấn độc đáo và sang trọng. Bạn có thể tìm thấy các sản phẩm như bàn ăn, giường ngủ, tủ quần áo, kệ sách, ghế sofa hay đồ trang trí được làm từ gỗ quý với các kiểu dáng đa dạng và phù hợp với mọi phong cách trang trí. <br>
-            </br> 
-        </p>  
-    <div>
-        <ul>
-            <img src="https://i.imgur.com/TWJNsV7.jpeg" alt="Sản phẩm 1" width="150px" height="200px">
-            <img src="https://i.imgur.com/ARWd6XF.jpeg" alt="sản phẩm 2" width="150px" height="200px">
-        </ul>
-    </div>  
-        <p>
-            Không chỉ là vật dụng hữu ích, sản phẩm nội thất từ gỗ quý còn là biểu tượng của sự sang trọng, đẳng cấp và sự đầu tư lâu dài vào không gian sống của bạn. Với khả năng tương thích với nhiều loại phông cách trang trí khác nhau, sản phẩm nội thất từ gỗ quý sẽ là điểm nhấn hoàn hảo cho ngôi nhà của bạn.
-    </p>    
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-          </svg>
-        <a href="https://www.facebook.com/Nguyenthanhdat191919/">Facebook CEO Thành Đạt</a>
-        <br>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
-                <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2m6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
-              </svg>
-        <a href="../video/video go 2.mp4">Video Sản Xuất </a>
-        <br>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-             </svg>
-      </body>
+</body>
 </html>
