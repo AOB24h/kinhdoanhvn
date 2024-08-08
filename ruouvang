@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Rượu vang ATA</title>
+</head>
+<body>
+    
+   <style>
+ #fixNav{
+  width: 100%;
+  height: 35px;
+  background-color: #202420;
+  display: block;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.5); /*Đổ bóng cho menu*/
+  position: fixed; /*Cho menu cố định 1 vị trí với top và left*/
+  top: 0; /*Nằm trên cùng*/
+  left: 0; /*Nằm sát bên trái*/
+  z-index: 100000; /*Hiển thị lớp trên cùng*/
+}
+#fixNav ul{
+  margin: 0;
+  padding: 0;
+}
+#fixNav ul li{
+  list-style:none inside;
+  width: auto;
+  float: left;
+  line-height: 35px; /*Cho text canh giữa menu*/
+  color: #fff;
+  padding: 0;
+  margin-right:10px;
+  position: relative;
+}
+#fixNav ul li a{
+  text-transform: uppercase;
+  white-space: nowrap; /*Cho chữ trong menu không bị wrap*/
+  padding: 0 10px;
+  color: #fff;
+  display: block;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+/*CSS Style cho Submenu*/
+#fixNav ul li ul {
+  position: absolute;
+  width: auto;
+  display: none;
+  background-color: #252525;
+  border-bottom: 3px solid #0082bb;
+  padding-left: 5px;
+}
+
+#fixNav ul li ul li{
+  display: block;
+  padding:0;
+  margin: 0;
+  float: none; /*Bỏ float cho li cấp thứ 2*/
+}
+/* Hover cho submenu */
+#fixNav ul li:hover {
+  /* Hover thì li sẽ đổi màu*/
+  background-color: #252525;
+}
+#fixNav ul li:hover ul{
+  /*Display ra submenu*/
+  display: block;
+}   
+    h1{
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        color: rgb(0, 0, 0)
+    }
+    
+    #div1{ 
+     
+    }
+
+    #hinhanhceo{
+                text-align: center;
+                text-indent :0px
+               }    
+    #achutich{
+              border-radius: 14px;
+             }
+
+   </style>
+   <nav id="fixNav">
+    <ul>
+      <li><a href="https://alouab.github.io">Trang chủ</a></li>
+      <li><a href="https://www.pnj.com.vn">PNJ</a></li>
+      <li><a href="https://download.pnjexm.com">Liên hệ</a></li>
+      <li>
+        <a href="#">Dịch vụ </a>
+        <ul class="Dịch vụ">
+          <li><a href="#">MKT PNJ</a></li>
+          <li><a href="#">Giấy tờ pháp lý</a></li>
+          <li><a href="#">Hỗ trợtrợ</a></li>
+       </ul>
+      </li>
+           <li><a href="#">Khác</a></li>
+    </ul>
+  </nav>
+    <div>
+    <ul>
+        <img src="https://i.imgur.com/TQusYiv.png" alt="Bìa" width="70px"; height="10px;">
+    </ul>   
+    </div>
+   
+    <h1></h1>
+        
+        <h2 id="div1">
+           1.Giới thiệu về công ty
+        </h2> 
+        <p>
+        <br>
+            Chúng tôi là một công ty tiên phong trong ngành sản xuất và kinh doanh xuất nhập khẩu rượu vang. Với hơn 10 năm kinh nghiệm trong ngành, chuyên nhập khẩu và phân phối những chai rượu vang tinh túy nhất từ đất nước Pháp – cái nôi của nghệ thuật chế tác rượu vang. Với niềm đam mê sâu sắc và sự tôn trọng đối với truyền thống lâu đời của ngành rượu vang Pháp, chúng tôi cam kết mang đến cho khách hàng những sản phẩm rượu vang đẳng cấp, được lựa chọn từ những vùng sản xuất danh tiếng nhất như Bordeaux, Burgundy, và Champagne. <br>
+        </br>
+       Sứ mệnh của chúng tôi là đưa đến tay khách hàng những chai rượu vang không chỉ đạt tiêu chuẩn chất lượng cao nhất mà còn phản ánh sự tinh tế và nét đặc trưng của từng vùng trồng nho. Chúng tôi cung cấp một danh mục sản phẩm đa dạng, từ những chai rượu vang đỏ sang trọng, rượu vang trắng tinh khiết, đến những loại Champagne sủi bọt lấp lánh, đáp ứng mọi yêu cầu và sở thích của người yêu rượu. <br>
+        </br>
+         Chúng tôi tin tưởng rằng sự kết hợp giữa kỹ thuật chọn lọc khắt khe, dịch vụ khách hàng tận tâm và mạng lưới đối tác toàn cầu của chúng tôi sẽ tạo nên những trải nghiệm thưởng thức rượu vang đẳng cấp. Đội ngũ của chúng tôi luôn nỗ lực không ngừng để mang đến những sản phẩm rượu vang chất lượng tuyệt hảo và dịch vụ vượt trội, nhằm đáp ứng nhu cầu của những khách hàng tinh tế nhất.<br>
+        </br>
+       Hãy cùng chúng tôi khám phá những hương vị phong phú và lôi cuốn của rượu vang Pháp, và để mỗi khoảnh khắc thưởng thức của bạn trở thành một trải nghiệm đáng nhớ và độc đáo. <br>
+        </br>
+        </p>
+        <br>
+
+        <p id="hinhanhceo">Những hình ảnh về người sáng lập ra Công ty rượu vang ATA </p>
+        <div>
+            <ul id="achutich">
+                <img src="https://i.imgur.com/63CIFCh.jpeg" alt="Hình ảnh 1" width="150px"> 
+                <img src="https://i.imgur.com/P6Su9G8.jpeg" alt="Hình Ảnh 2" width="150px" >
+                <img src="https://i.imgur.com/oz6SgGQ.jpeg" alt="Hình ảnh 3" width="150px">
+                <img src="https://i.imgur.com/BzOkuNq.jpeg" alt="Hình Ảnh 4" width="150px">
+            </ul>
+          </div>
+        <h2>
+            2.Sản phẩm rượu vang công ty chúng tôi
+        </h2>
+        <p>
+            A.Frescobaldi Nipozzano Reserva, Chianti Rufina với 24 tháng ủ trong thùng sồi. <br>
+    </br>
+            B.Villabella Valpolicella Classico Superiore Ripasso DOC, rượu vang đỏ lên men hai lần vùng Đông Bắc Italia, quê hương của chuyện tình lãng mạn Romeo và Julietta. <br>
+        </br>
+        </p>
+    <div>
+        <ul>
+            <img src="https://i.imgur.com/wHvLG9D.jpeg" alt="ruoi1" width="150px">
+            <img src="https://i.imgur.com/j2p2hl6.jpeg" alt="ruou" width="150px" height="200px">
+        </ul>
+    </div>
+        <p>
+            C.Lucente Toscana IGT các size 750ml-1500ml-3000ml-6000ml trong hộp gỗ dập dấu nhiệt. <br>
+            </br> 
+            D.Frescobaldi Brunello di Montalcino Castelgiocondo DOCG Reserva vụ nho 2010, một trong những vụ nho oách nhất với rating 98/100 pts và đứng thứ 19 trong Top 100 loại vang ngon nhất Năm 2016.<br>
+       </br>
+        </p>  
+    <div>
+        <ul>
+            <img src="https://i.imgur.com/9KTjp4C.jpeg" alt="Sản phẩm 1" width="150px" height="200px">
+            <img src="https://i.imgur.com/1SzPwgK.jpeg" alt="sản phẩm 2" width="150px" height="200px">
+        </ul>
+    </div>  
+        <p>
+            Rượu vang không chỉ là một tên gọi của rượu , mà tiếng vang của rượu vang ATA đã vang rộng khắp mọi miền đất nước Trung Quốc và các nước ở Đông Nam Á
+    </p>    
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+          </svg>
+        <a href="https://www.facebook.com/Tuanhai12709/">Facebook CEO</a>
+        <br>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
+                <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2m6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+              </svg>
+        <a href="../video/video go 2.mp4">Video Sản Xuất </a>
+        <br>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+             </svg>
+      </body>
+</html>
